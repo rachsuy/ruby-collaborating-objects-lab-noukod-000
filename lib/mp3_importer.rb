@@ -6,8 +6,8 @@ class MP3Importer
    @artist=artist
   end
   
-  def import(file_name)
-    file_name.each do |e| Song.new_by_filename(e) 
+  def import
+    @file_name.each do |e| Song.new_by_filename(e) 
   end 
   end
   
