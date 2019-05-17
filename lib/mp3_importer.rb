@@ -3,11 +3,11 @@ class MP3Importer
 
   def initialize(path)
    @path = path
-   @artist=artist
+   
   end
   
   def import
-    @file_name.each do |e| Song.new_by_filename(e) 
+    @files.each do |e| Song.new_by_filename(e) 
   end 
   end
   
