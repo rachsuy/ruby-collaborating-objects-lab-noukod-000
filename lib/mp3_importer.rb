@@ -3,7 +3,7 @@ class MP3Importer
 
   def initialize(path)
    @path = path
-   
+   @files=Dir.entries(path).grep(/.*\.mp3/)
   end
   
   def import
@@ -11,7 +11,7 @@ class MP3Importer
   end 
   end
   
-  def files
-      @files = Dir.glob("#{@path}/*.mp3").collect{ |file| file.gsub("#{@path}/", "") }
-  end
+  # files
+   #   @files = Dir.glob("#{@path}/*.mp3").collect{ |file| file.gsub("#{@path}/", "") }
+ # end
 end
